@@ -1,0 +1,58 @@
+<!-- 内容 -->
+<view class="content">
+
+  <!-- 黄色顶部 -->
+  <view class="yellow-header">
+    <view class="title"> 二十四节令鼓 24 Festive Drums</view>
+    <!-- 标题 -->
+    <view class="circle-container">
+    <view wx:for="{{circles}}" wx:key="index" class="circle"></view>
+    </view>
+    <!-- 渲染9个小圆 -->
+    
+  </view>
+
+  <!-- 梅兰竹菊背景 -->
+  <view class="background-view fade-in">
+    <image class="background-image" src="/images/bg/Orchid.png" mode="aspectFill"></image>
+  </view>
+  
+  <!-- 书法背景 -->
+
+  <image class="Calligraphy fade-in" src="/images/calligraphy/first.png"></image>
+
+
+  <!-- 主体：鼓 -->
+  <view class="info" animation="{{animation}}" style="color: {{isOriginalOrder ? '#FFD700': 'black'}}">{{infoText}}</view>
+  <image src="/images/main/drum.png" bindtap="tapDrum" class="drum"></image>
+
+
+  <!-- 底部绳子 -->
+  <view class="rope-section2"></view>
+  <view class="rope-section1"></view>
+
+  <!-- 工具栏 -->
+  <view class="tool">
+    <!-- 第一：帮助按钮 -->
+    <view bindtap="help" class="tool-list">
+      <view>
+        <image mode="widthFix" src="/images/btn/help.png"></image>
+      </view>
+      <view class="text">帮助</view>
+    </view>
+    <!-- 第二：音乐按钮 -->
+    <view bindtap="music" class="tool-list">
+      <view>
+        <image mode="widthFix" src="{{auto?'../../images/btn/music.png':'../../images/btn/stop.png'}}"></image>
+      </view>
+      <view class="text">音乐</view>
+    </view>
+    <!-- 第三：分享按钮 -->
+    <view bindtap="share" class="tool-list">
+      <view>
+        <image mode="widthFix" src="/images/btn/arrow.png"></image>
+      </view>
+      <view class="text">分享</view>
+    </view>
+  </view>
+</view>

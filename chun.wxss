@@ -1,0 +1,8 @@
+.Calligraphy {
+  width: 630rpx; /* 设置图片的宽度 */
+  height: 770rpx; /* 设置图片的高度 */
+  object-fit: cover; /* 确保图片填充整个容器但是也保持其宽高比 */
+  position: relative; /* 相对定位（你也可以使用 'absolute'，但这取决于父容器） */
+  top: 50rpx; /* 从顶部向下移动图片 */
+  left: 2rpx; /* 从左侧向右移动图片 */
+}
